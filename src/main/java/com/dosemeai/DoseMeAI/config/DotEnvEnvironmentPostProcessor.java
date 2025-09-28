@@ -25,7 +25,7 @@ public class DotEnvEnvironmentPostProcessor implements EnvironmentPostProcessor 
                 System.err.println("Erro ao carregar .env: " + e.getMessage());
             }
         } else {
-            System.out.println("⚠️ Arquivo .env não encontrado");
+            System.out.println("Arquivo .env não encontrado");
         }
     }
 }
