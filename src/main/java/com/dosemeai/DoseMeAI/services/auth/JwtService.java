@@ -1,4 +1,4 @@
-package com.dosemeai.DoseMeAI.services;
+package com.dosemeai.DoseMeAI.services.auth;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;

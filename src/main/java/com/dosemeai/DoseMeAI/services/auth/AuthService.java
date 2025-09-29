@@ -1,4 +1,4 @@
-package com.dosemeai.DoseMeAI.services;
+package com.dosemeai.DoseMeAI.services.auth;
 
 import com.dosemeai.DoseMeAI.domain.auth.JwtResponse;
 import com.dosemeai.DoseMeAI.domain.auth.LoginRequest;

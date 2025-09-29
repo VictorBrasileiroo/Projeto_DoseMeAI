@@ -1,7 +1,7 @@
 package com.dosemeai.DoseMeAI.config;
 
 import com.dosemeai.DoseMeAI.security.JwtAuthenticationFilter;
-import com.dosemeai.DoseMeAI.services.CustomUserDetailsService;
+import com.dosemeai.DoseMeAI.services.auth.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -53,6 +53,7 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/auth/**").permitAll()
                 .requestMatchers("/api/users/register").permitAll()
+                .requestMatchers("/api/medicines/**").permitAll() // Permitindo acesso público aos medicines
                 .requestMatchers("/api/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
             )

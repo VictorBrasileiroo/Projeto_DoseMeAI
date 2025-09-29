@@ -1,4 +1,4 @@
-package com.dosemeai.DoseMeAI.services;
+package com.dosemeai.DoseMeAI.services.auth;
 
 import com.dosemeai.DoseMeAI.domain.users.UserModel;
 import com.dosemeai.DoseMeAI.repositories.users.IUserRepository;

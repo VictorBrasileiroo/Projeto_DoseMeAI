@@ -1,9 +1,9 @@
-package com.dosemeai.DoseMeAI.controllers;
+package com.dosemeai.DoseMeAI.controllers.auth;
 
 import com.dosemeai.DoseMeAI.domain.auth.JwtResponse;
 import com.dosemeai.DoseMeAI.domain.auth.LoginRequest;
 import com.dosemeai.DoseMeAI.domain.auth.RegisterRequest;
-import com.dosemeai.DoseMeAI.services.AuthService;
+import com.dosemeai.DoseMeAI.services.auth.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

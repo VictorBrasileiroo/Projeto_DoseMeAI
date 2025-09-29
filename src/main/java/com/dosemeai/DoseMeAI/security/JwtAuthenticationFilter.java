@@ -1,6 +1,6 @@
 package com.dosemeai.DoseMeAI.security;
 
-import com.dosemeai.DoseMeAI.services.JwtService;
+import com.dosemeai.DoseMeAI.services.auth.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
