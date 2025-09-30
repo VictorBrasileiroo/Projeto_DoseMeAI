@@ -39,12 +39,12 @@ public class MedicineService {
         return medMapper.toDtoResponse(savedMedicine);
     }
 
-    public MedicineModel removeMedicine(UUID id){
+    public MedicineDtoResponse removeMedicine(UUID id){
         var medicine = medRepo.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Medicine not found"));
 
         medRepo.delete(medicine);
-        return medicine;
+        return medMapper.toDtoResponse(medicine);
     }
 
     public MedicineDtoResponse updateMedicine(UUID id, MedicineDtoRequest dto){
