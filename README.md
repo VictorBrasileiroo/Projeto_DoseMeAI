@@ -1,7 +1,6 @@
 # 🧓💊 DoseMeAI
 
-![DoseMeAI Logo](https://via.placeholder.com/600x200/E8F4F8/4A90A4?text=DoseMeAI+-+Seu+Assistente+de+Medicamentos)
-
+<img src="banner.png"></img>
 **DoseMeAI** é uma aplicação inteligente de gerenciamento de medicamentos desenvolvida para ajudar pessoas, especialmente idosos, a organizarem e lembrarem de tomar seus medicamentos de forma segura e eficiente.
 
 ## 📋 Índice
