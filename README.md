@@ -51,7 +51,16 @@ A aplicação utiliza uma identidade visual acolhedora e acessível:
 - ✅ Listagem organizada de medicamentos
 - ✅ Informações detalhadas sobre cada medicamento
 
-### ⏰ Sistema de Lembretes
+## Prints do Frontend
+Abaixo, prints da interface web para facilitar a apresentação e geração de slides:
+
+| Tela 1 | Tela 2 |
+| ------ | ------ |
+| ![](src/main/resources/images/img_1.png) | ![](src/main/resources/images/img_2.png) |
+| ![](src/main/resources/images/img_3.png) | ![](src/main/resources/images/img_4.png) |
+| ![](src/main/resources/images/img_5.png) | ![](src/main/resources/images/img_6.png) |
+| ![](src/main/resources/images/img_7.png) | ![](src/main/resources/images/img.png) |
+
 - ✅ Criação de lembretes personalizados
 - ✅ Configuração de horários múltiplos
 - ✅ Notificações por email (integração Resend)
@@ -70,6 +79,7 @@ A aplicação utiliza uma identidade visual acolhedora e acessível:
 - **Spring Security** - Segurança e autenticação
 - **Spring Data JPA** - Persistência de dados
 - **JWT (JSON Web Token)** - Autenticação stateless
+
 - **MapStruct** - Mapeamento de objetos
 - **Lombok** - Redução de código boilerplate
 
