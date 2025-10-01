@@ -1,7 +1,9 @@
 # 🧓💊 DoseMeAI
 
-<img src="banner.png"></img>
 **DoseMeAI** é uma aplicação inteligente de gerenciamento de medicamentos desenvolvida para ajudar pessoas, especialmente idosos, a organizarem e lembrarem de tomar seus medicamentos de forma segura e eficiente.
+
+
+<img src="banner.png"></img>
 
 ## 📋 Índice
 
@@ -125,32 +127,26 @@ docker-compose --version
 
 ### 1. Clone o repositório
 ```bash
-git clone <repository-url>
+git clone https://github.com/VictorBrasileiroo/DoseMeAI.git
 cd DoseMeAI
 ```
 
 ### 2. Configure as variáveis de ambiente
 Crie um arquivo `.env` na raiz do projeto:
 ```env
-# Database Configuration
 POSTGRES_DB=dosemeai
 POSTGRES_USER=dosemeai_user
 POSTGRES_PASSWORD=dosemeai_password
 
-# JWT Configuration
 JWT_SECRET=minha-chave-secreta-muito-segura-para-jwt-tokens-deve-ter-pelo-menos-256-bits-de-comprimento
 JWT_EXPIRATION=86400000
 
-# Email Configuration (Resend)
 RESEND_API_KEY=seu_resend_api_key_aqui
 ```
 
 ### 3. Execução com Docker (Recomendado)
 ```bash
-# Inicia o banco de dados PostgreSQL
 docker-compose up -d
-
-# Executa a aplicação
 mvn spring-boot:run
 ```
 
@@ -383,36 +379,6 @@ services:
 volumes:
   postgres_data:
 ```
-
-## 🤝 Contribuição
-
-Contribuições são bem-vindas! Para contribuir:
-
-1. **Fork** o projeto
-2. Crie uma **branch** para sua feature (`git checkout -b feature/AmazingFeature`)
-3. **Commit** suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um **Pull Request**
-
-### Padrões de Código
-- Use **Java 17** features quando apropriado
-- Siga as convenções do **Spring Boot**
-- Mantenha **cobertura de testes** > 80%
-- Use **Lombok** para reduzir boilerplate
-- Documente APIs com **Swagger annotations**
-
-### Commit Messages
-Use o padrão de commits convencionais:
-```
-feat: adiciona nova funcionalidade
-fix: corrige bug
-docs: atualiza documentação
-style: mudanças de formatação
-refactor: refatoração de código
-test: adiciona ou corrige testes
-chore: tarefas de manutenção
-```
-
 ## 🐛 Troubleshooting
 
 ### Problemas Comuns
@@ -446,28 +412,3 @@ server.port=8082
 ## 📝 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## 📞 Contato e Suporte
-
-- **Email**: [seu-email@exemplo.com]
-- **Issues**: [GitHub Issues](link-para-issues)
-- **Documentação**: [Wiki do Projeto](link-para-wiki)
-
-## 🙏 Agradecimentos
-
-- Comunidade Spring Boot
-- Documentação do PostgreSQL
-- Swagger/OpenAPI team
-- Todos os contribuidores do projeto
-
----
-
-## 📊 Status do Projeto
-
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Java](https://img.shields.io/badge/java-17-orange)
-![Spring Boot](https://img.shields.io/badge/spring--boot-3.5.6-green)
-![License](https://img.shields.io/badge/license-MIT-blue)
-
-**DoseMeAI** - Transformando o cuidado com medicamentos através da tecnologia 💊❤️
