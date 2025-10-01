@@ -16,9 +16,6 @@
 - [API Documentation](#-api-documentation)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 - [Uso da API](#-uso-da-api)
-- [Testes](#-testes)
-- [Deploy](#-deploy)
-- [Contribuição](#-contribuição)
 - [Licença](#-licença)
 
 ## 🎯 Sobre o Projeto
