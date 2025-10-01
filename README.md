@@ -51,16 +51,7 @@ A aplicação utiliza uma identidade visual acolhedora e acessível:
 - ✅ Listagem organizada de medicamentos
 - ✅ Informações detalhadas sobre cada medicamento
 
-## Prints do Frontend
-Abaixo, prints da interface web para facilitar a apresentação e geração de slides:
-
-| Tela 1 | Tela 2 |
-| ------ | ------ |
-| ![](src/main/resources/images/img_1.png) | ![](src/main/resources/images/img_2.png) |
-| ![](src/main/resources/images/img_3.png) | ![](src/main/resources/images/img_4.png) |
-| ![](src/main/resources/images/img_5.png) | ![](src/main/resources/images/img_6.png) |
-| ![](src/main/resources/images/img_7.png) | ![](src/main/resources/images/img.png) |
-
+### 🚀 Gerenciamento de Lmebretes
 - ✅ Criação de lembretes personalizados
 - ✅ Configuração de horários múltiplos
 - ✅ Notificações por email (integração Resend)
@@ -70,6 +61,19 @@ Abaixo, prints da interface web para facilitar a apresentação e geração de s
 - ✅ Visualização de lembretes pessoais
 - ✅ Acompanhamento de adesão
 - ✅ Histórico de medicamentos
+
+## Prints do Frontend
+<p float="left">
+  <img src="src/main/resources/images/img_1.png" width="500"/>
+  <img src="src/main/resources/images/img_2.png" width="470"/>
+  <img src="src/main/resources/images/img_3.png" width="500"/>
+  <img src="src/main/resources/images/img_4.png" width="500"/>
+  <img src="src/main/resources/images/img_5.png" width="500"/>
+  <img src="src/main/resources/images/img_6.png" width="500"/>
+  <img src="src/main/resources/images/img_7.png" width="500"/>
+  <img src="src/main/resources/images/img.png" width="500"/>
+</p>
+
 
 ## 🛠 Tecnologias Utilizadas
 
