@@ -3,12 +3,15 @@ package com.dosemeai.DoseMeAI.controllers.auth;
 import com.dosemeai.DoseMeAI.domain.auth.JwtResponse;
 import com.dosemeai.DoseMeAI.domain.auth.LoginRequest;
 import com.dosemeai.DoseMeAI.domain.auth.RegisterRequest;
+import com.dosemeai.DoseMeAI.domain.users.UserModel;
 import com.dosemeai.DoseMeAI.services.auth.AuthService;
 import com.dosemeai.DoseMeAI.utils.ResponseModel;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -35,6 +38,16 @@ public class AuthController {
             return ResponseModel.ok(true, "Success Register.", response);
         } catch (Exception e) {
             return ResponseModel.error(false, "Register Failed: " + e.getMessage());
+        }
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseModel<UserModel> deleteUser(@PathVariable UUID id) {
+        try {
+            var response = authService.deleteUser(id);
+            return ResponseModel.ok(true, "User deleted successfully.", response);
+        } catch (Exception e) {
+            return ResponseModel.error(false, "Delete Failed: " + e.getMessage());
         }
     }
 }

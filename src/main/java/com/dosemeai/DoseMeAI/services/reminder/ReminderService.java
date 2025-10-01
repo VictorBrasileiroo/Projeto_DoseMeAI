@@ -10,6 +10,9 @@ import com.dosemeai.DoseMeAI.repositories.reminders.IReminderRepository;
 import com.dosemeai.DoseMeAI.repositories.users.IUserRepository;
 import com.dosemeai.DoseMeAI.services.email.EmailService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperties;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.autoconfigure.security.oauth2.resource.ConditionalOnIssuerLocationJwtDecoder;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +30,7 @@ public class ReminderService {
     private final IMedicineRepository repoMedicine;
 
     @Scheduled(fixedDelay = 60_000)
+    @ConditionalOnProperty(name = "reminder.scheduling.enabled", havingValue = "true")
     public void sendPendingReminders(){
         var now = LocalDateTime.now();
         List<ReminderModel> pendingReminders = repoReminder.findBySentFalseAndRemindAtBefore(now);

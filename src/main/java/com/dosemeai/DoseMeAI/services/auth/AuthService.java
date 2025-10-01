@@ -5,6 +5,7 @@ import com.dosemeai.DoseMeAI.domain.auth.LoginRequest;
 import com.dosemeai.DoseMeAI.domain.auth.RegisterRequest;
 import com.dosemeai.DoseMeAI.domain.users.UserModel;
 import com.dosemeai.DoseMeAI.repositories.users.IUserRepository;
+import com.dosemeai.DoseMeAI.repositories.reminders.IReminderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -12,12 +13,18 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.UUID;
 
 @Service
 public class AuthService {
 
     @Autowired
     private IUserRepository userRepository;
+
+    @Autowired
+    private IReminderRepository reminderRepository;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -86,5 +93,18 @@ public class AuthService {
                 savedUser.getEmail(),
                 savedUser.getRole()
         );
+    }
+
+    @Transactional
+    public UserModel deleteUser(UUID userId) {
+        UserModel user = userRepository.findById(userId)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+
+        // Deletar todos os lembretes do usuário primeiro
+        reminderRepository.deleteByUser(user);
+
+        // Agora pode deletar o usuário sem erro de constraint
+        userRepository.delete(user);
+        return user;
     }
 }

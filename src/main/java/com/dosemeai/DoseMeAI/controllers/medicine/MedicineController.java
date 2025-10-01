@@ -5,10 +5,7 @@ import com.dosemeai.DoseMeAI.domain.medicine.MedicineDtoResponse;
 import com.dosemeai.DoseMeAI.domain.medicine.MedicineModel;
 import com.dosemeai.DoseMeAI.services.medicine.MedicineService;
 import com.dosemeai.DoseMeAI.utils.ResponseModel;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.RequestEntity;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
